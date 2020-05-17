@@ -10,8 +10,10 @@
 10) Add consoleblank=0 
 11) sudo nano /etc/rc.local
 12) Delete all and paste this code (enter your rstp stream before insertion)
-```
 
+
+```
+# THIS IS 9 STREAMS
 #!/bin/sh -e
 
 sleep 1s &&
@@ -35,4 +37,23 @@ screen -dmS stream9 sh -c 'omxplayer --video_queue 1800 --refresh --live --win "
 
 exit 0
 ```
+
+```
+# THIS IS 6 STREAMS
+#!/bin/sh -e
+
+sleep 1s &&
+#!/bin/bash
+screen -dmS stream1 sh -c 'omxplayer --video_queue 1000 --refresh --live --win "0 0 426 360" rtsp://; exec bash'
+screen -dmS stream2 sh -c 'omxplayer --video_queue 1100 --refresh --live --win "426 0 852 360" rtsp://; exec bash'
+screen -dmS stream3 sh -c 'omxplayer --video_queue 1200 --refresh --live --win "852 0 1280 360" rtsp://; exec bash'
+
+sleep 3s &&
+#!/bin/bash
+screen -dmS stream4 sh -c 'omxplayer --video_queue 1300 --refresh --live --win "0 360 426 720" rtsp://; exec bash'
+screen -dmS stream5 sh -c 'omxplayer --video_queue 1400 --refresh --live --win "426 360 852 720" rtsp://; exec bash'
+screen -dmS stream6 sh -c 'omxplayer --video_queue 1500 --refresh --live --win "852 360 1280 720" rtsp://; exec bash'
+exit 0
+```
+
 13) reboot
