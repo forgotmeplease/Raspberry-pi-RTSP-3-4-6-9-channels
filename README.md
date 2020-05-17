@@ -38,6 +38,8 @@ screen -dmS stream9 sh -c 'omxplayer --video_queue 1800 --refresh --live --win "
 exit 0
 ```
 
+or
+
 ```
 # THIS IS 6 STREAMS
 #!/bin/sh -e
