@@ -58,4 +58,42 @@ screen -dmS stream6 sh -c 'omxplayer --video_queue 1500 --refresh --live --win "
 exit 0
 ```
 
+or
+
+```
+# THIS IS 4 STREAMS
+#!/bin/sh -e
+
+sleep 1s &&
+#!/bin/bash
+screen -dmS stream1 sh -c 'omxplayer --video_queue 1000 --refresh --live --win "0 0 1008 1050" rtsp://; exec bash'
+screen -dmS stream2 sh -c 'omxplayer --video_queue 1100 --refresh --live --win "1008 0 1680 350" rtsp://; exec bash'
+
+sleep 3s &&
+#!/bin/bash
+screen -dmS stream3 sh -c 'omxplayer --video_queue 1200 --refresh --live --win "1008 350 1680 700" rtsp://; exec bash'
+screen -dmS stream4 sh -c 'omxplayer --video_queue 1300 --refresh --live --win "1008 700 1680 1050" rtsp://; exec bash'
+
+exit 0
+```
+
+or
+
+```
+# THIS IS 3 STREAMS
+#!/bin/sh -e
+
+sleep 1s &&
+#!/bin/bash
+screen -dmS stream1 sh -c 'omxplayer --video_queue 1000 --refresh --live --win "0 0 1280 1080" rtsp://; exec bash'
+screen -dmS stream2 sh -c 'omxplayer --video_queue 1100 --refresh --live --win "1280 0 1920 720" rtsp://; exec bash'
+
+sleep 3s &&
+#!/bin/bash
+screen -dmS stream3 sh -c 'omxplayer --video_queue 1200 --refresh --live --win "1280 720 1920 1080" rtsp://; exec bash'
+
+
+exit 0
+```
+
 13) reboot
