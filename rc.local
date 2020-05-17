@@ -1,4 +1,3 @@
-```
 #!/bin/sh -e
 
 sleep 1s &&
@@ -21,4 +20,3 @@ screen -dmS stream9 sh -c 'omxplayer --video_queue 1800 --refresh --live --win "
 
 
 exit 0
-```
