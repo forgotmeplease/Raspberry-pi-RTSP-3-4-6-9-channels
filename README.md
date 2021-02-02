@@ -1,11 +1,3 @@
-Donation:
-```
-BTC: bc1qyrvgr9q05rlltndq6dhvjyh4y3avkpu837mg3l
-ETH: 0xB20155De217c5d4cD17b85CCFa1947721fa20536
-USDT ERC20: 0xB20155De217c5d4cD17b85CCFa1947721fa20536
-DOGE: D8scZTf8omdNn5NcHVNnQMJYTDifSKUnAR
-```
-
 1) Connect to you raspberry pi and open console
 2) sudo apt update && sudo apt upgrade
 3) reboot
