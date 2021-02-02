@@ -1,4 +1,4 @@
-1) Connect to you raspberry pi and open console
+1) Open Linux terminal 
 2) sudo apt update && sudo apt upgrade
 3) reboot
 4) sudo raspi-config
